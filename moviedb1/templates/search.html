@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/moviedb1/style.css' %}">
+
+</head>
+<body>
+
+<div id="header">
+<h1>Satyam Movie Database</h1>
+</div>
+
+<div id="nav">
+    <a href="../home/">Home</a>&nbsp
+    <a href="../listmovie/">List All Movies</a>&nbsp
+    <a href="">Search Movie</a>&nbsp
+    <a href="../addmovie/">Add New Movie</a>
+<br>
+</div>
+
+<div id="section">
+    <h2>Search for a Movie in the Database</h2>
+<form method="get">
+    <ul>
+       <dt>Title: {{ form.title}}<br><br></dt>
+       <dt>Country: {{form.country}}<br><br></dt>
+       <dt>Genre: {{ form.genre}}<br><br></dt>
+        <dt>Language: {{ form.language}}<br><br></dt>
+        <dt>Rating: {{ form.rating}}<br><br></dt>
+    </ul>
+    <input type="submit" name="submit" value="Search Movie">
+</form>
+</div>
+
+</body>

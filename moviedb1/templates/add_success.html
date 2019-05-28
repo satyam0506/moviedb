@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/moviedb1/style.css' %}">
+
+</head>
+<body>
+
+<div id="header">
+<h1>Satyam Movie Database</h1>
+</div>
+
+<div id="nav">
+    <a href="../home/">Home</a>&nbsp
+    <a href="../listmovie/">List All Movies</a>&nbsp
+    <a href="../searchmovie/">Search Movie</a>&nbsp
+    <a href="../addmovie/">Add New Movie</a>&nbsp
+<br>
+</div>
+
+<div id="section">
+<p>
+Added the movie {{movie_title}}
+</p>
+</div>
+
+</body>

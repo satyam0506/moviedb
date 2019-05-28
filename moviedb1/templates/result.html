@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/moviedb1/style.css' %}">
+
+</head>
+<body>
+
+<div id="header">
+<h1>Satyam Movie Database</h1>
+</div>
+
+<div id="nav">
+    <a href="../home/">Home</a>&nbsp
+    <a href="../listmovie/">List All Movies</a>&nbsp
+    <a href="../searchmovie">Search Movie</a>&nbsp
+    <a href="../addmovie/">Add New Movie</a>
+<br>
+</div>
+
+
+<div id="section">
+    <h1>The Search Result for: {{ search_string }} </h1>
+    <table id="myTable" style="width:250%" class="tablesorter">
+    <thead>
+    <tr>
+        <th>Movie Title</th>
+        <th>Country</th>
+        <th>Genre</th>
+        <th>Language</th>
+        <th>Rating</th>
+     </tr>
+    </thead>
+    <tbody>
+     {% for movie_dict in movie_listing %}
+        <tr>
+            <td align="center" width="40">{{ movie_dict.movie_object.title}}</td>
+            <td align="center" width="15">{{ movie_dict.movie_object.country}}</td>
+            <td align="center" width="10">{{ movie_dict.movie_object.genre}}</td>
+            <td align="center" width="12">{{ movie_dict.movie_object.language}}</td>
+            <td align="center" width="12">{{ movie_dict.movie_object.rating}}</td>
+        </tr>
+
+     {% endfor %}
+    <tbody>
+    </table>
+
+</div>
+
+</body>
